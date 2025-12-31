@@ -1,4 +1,4 @@
-# BeetNet — GRU Autoencoder for Mel Spectrogram Generation from Beethoven Piano Music
+# BeethovenNet — GRU Autoencoder for Mel Spectrogram Generation from Beethoven Piano Music
 
 <img width="1106" height="350" alt="Screenshot 2025-12-31 230943" src="https://github.com/user-attachments/assets/01cc94b1-1cdf-481a-bc91-1e8de2fe08de" />
 
