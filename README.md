@@ -25,6 +25,8 @@ Spectrogram amplitudes are converted to decibels, clipped to a dynamic range def
 
 The autoencoder consists of an encoder and a decoder built with GRU layers.
 
+<img width="500" height="251" alt="Screenshot 2025-12-31 232949" src="https://github.com/user-attachments/assets/1a59d260-66e3-4ae6-8286-54025cdfe5c1" />
+
 ### Encoder 
 
 An input mel spectrogram is interpreted as a sequence of time frames, each frame represented by a vector of length equal to the number of mel bins. Each frame is projected by a learnable linear layer into an encoding dimension and processed by a bidirectional stack of GRU layers. The final hidden state at the last time step is used as latent vector $z$ of dimension 256.
