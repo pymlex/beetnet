@@ -17,11 +17,7 @@ Mel spectrogram parameters are:
 - hop length equal to 512,  
 - number of mel bins equal to 96.
 
-Spectrogram amplitudes are converted to decibels, clipped to a dynamic range defined by $m_{\min}$ and $m_{\max}$, and standardised using global mean $\mu$ and standard deviation $\sigma$ computed across the whole dataset. The applied normalisation is
-
-$$\tilde{m} = \frac{\mathrm{clip}(m, m_{\min}, m_{\max}) - \mu}{\sigma}$$
-
-Clipped and standardised spectrogram tensors are cached in the directory `mel_cache` in PyTorch tensor format for fast data loading.
+Spectrogram amplitudes are converted to decibels, clipped to a dynamic range defined by $m_{\min}$ and $m_{\max}$, and standardised using global mean $\mu$ and standard deviation $\sigma$ computed across the whole dataset. Then the standartisations is applied. Clipped and standardised spectrogram tensors are cached in the directory `mel_cache` in PyTorch tensor format for fast data loading.
 
 ---
 
@@ -49,11 +45,7 @@ Model sizes and hyperparameters used in experiments:
 
 ## Training objective and optimisation
 
-Reconstruction loss is the elementwise mean absolute error in mel dB space. For a minibatch of size $B$, time length $T$ and mel bins $F$ the loss is
-
-$$\mathcal{L}_{rec} = \frac{1}{BTF}\sum_{b=1}^B\sum_{t=1}^T\sum_{f=1}^F \left|\hat{M}_{b,f,t} - M_{b,f,t}\right|$$
-
-Training settings used in the notebook:
+Reconstruction loss is the elementwise mean absolute error in mel dB space. The training settings used in the notebook:
 
 - batch size equal to 32  
 - number of epochs equal to 50
