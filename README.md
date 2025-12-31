@@ -23,6 +23,8 @@ $$\tilde{m} = \frac{\mathrm{clip}(m, m_{\min}, m_{\max}) - \mu}{\sigma}$$
 
 Clipped and standardised spectrogram tensors are cached in the directory `mel_cache` in PyTorch tensor format for fast data loading.
 
+---
+
 ## Model architecture
 
 The autoencoder consists of an encoder and a decoder built with GRU layers.
@@ -43,6 +45,8 @@ Model sizes and hyperparameters used in experiments:
 - encoder GRU layers equal to 2, 
 - decoder GRU layers equal to 2.
 
+---
+
 ## Training objective and optimisation
 
 Reconstruction loss is the elementwise mean absolute error in mel dB space. For a minibatch of size $B$, time length $T$ and mel bins $F$ the loss is
@@ -58,6 +62,8 @@ Training settings used in the notebook:
 - model checkpoints saved after every epoch.
 
 All training is performed on T4 GPU in Google Colab.
+
+---
 
 ## Results and evaluation
 
