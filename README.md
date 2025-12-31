@@ -63,6 +63,6 @@ All training is performed on T4 GPU in Google Colab.
 
 At each epoch, the training L1 loss was saved to the history for further visualization. The presented graph shows a high stability of the learning process.
 
-<img width="725" height="349" alt="image" src="https://github.com/user-attachments/assets/2beb4ffa-3cc0-4b8c-b376-4c8c2e51517a" />
+<img width="500" height="240" alt="Screenshot 2025-12-31 232235" src="https://github.com/user-attachments/assets/ba8ce165-8729-45cf-af21-b327e473971b" />
 
 The final L1 loss is approximately 0.17, which is sufficient to generate realistic spectrograms.
