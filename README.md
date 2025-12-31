@@ -4,7 +4,7 @@
 
 ## Introduction
 
-This project extracts two second audio segments from a curated subset of MusicNet containing solo piano works by Beethoven, converts audio to mel spectrograms, and trains a recurrent autoencoder to reconstruct spectrograms frame by frame. The model treats each spectrogram as a temporal sequence of frequency frames, encodes the sequence into a fixed size latent vector, and decodes the latent vector back into a full spectrogram. Reconstruction quality is measured with L1 loss in decibels and checkpoints are saved after each epoch.
+This project extracts two second audio segments from a curated [subset](https://www.kaggle.com/datasets/alexzyukov/beethoven) of [MusicNet](https://www.kaggle.com/datasets/alonhaviv/musicnet) containing solo piano works by Beethoven, converts audio to mel spectrograms, and trains a recurrent autoencoder to reconstruct spectrograms frame by frame. The model treats each spectrogram as a temporal sequence of frequency frames, encodes the sequence into a fixed size latent vector, and decodes the latent vector back into a full spectrogram. Reconstruction quality is measured with L1 loss in decibels and checkpoints are saved after each epoch.
 
 ## Data and preprocessing
 
